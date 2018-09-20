@@ -15,10 +15,6 @@
 (global-set-key (kbd "<C-XF86Forward>")
                 'next-buffer)
 
-(global-set-key (kbd "<XF86HomePage>") 'eshell)
-
-(global-set-key (kbd "<XF86Favorites>") 'magit-status)
-
 (global-set-key (kbd "<XF86ApplicationRight>")
                 'forward-sexp)
 
