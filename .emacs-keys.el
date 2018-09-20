@@ -36,6 +36,12 @@
                                   (define-key markdown-mode-map "\C-ca"
                                     'auto-fill-mode)))
 
+(require 'ibuffer)
+(global-set-key (kbd "C-x C-b")
+                'ibuffer)
+
+;; Windows & navigation
+
 (global-set-key (kbd "C-c h")  'windmove-left)
 (global-set-key (kbd "C-c l") 'windmove-right)
 (global-set-key (kbd "C-c k")    'windmove-up)
@@ -44,13 +50,9 @@
 (global-set-key (kbd "C-c [")  'winner-undo)
 (global-set-key (kbd "C-c ]")  'winner-redo)
 
-(require 'ibuffer)
-(global-set-key (kbd "C-x C-b")
-                'ibuffer)
+;; Fun row
 
 (global-set-key (kbd "<f2>") 'eshell)
-
-(global-set-key (kbd "C-5") 'magit-status)
 
 (global-set-key (kbd "<f5>") 'magit-status)
 
@@ -65,6 +67,10 @@
 (global-set-key (kbd "C-<f10>") 'my/whitespace-cleanup-switch)
 
 (global-set-key (kbd "<f12>") 'projectile-compile-project)
+
+;; MBP Touch bar workarounds
+
+(global-set-key (kbd "C-5") 'magit-status)
 
 ;; British keyboard workarounds
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
