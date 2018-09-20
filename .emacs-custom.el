@@ -174,4 +174,4 @@
  ;; If there is more than one, they won't work right.
  '(ein:cell-input-area ((t nil)))
  '(ein:cell-input-prompt ((t (:inherit header-line :weight bold))))
- '(ein:cell-output-area ((t (:background "honeydew1"))) t))
+ '(ein:cell-output-area ((t (:inherit highlight))) t))
