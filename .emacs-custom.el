@@ -113,7 +113,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (pipenv elpy eimp projectile auctex graphviz-dot-mode lua-mode company intero paradox highlight-thing diff-hl idris-mode docker dockerfile-mode cider json-mode json-reformat restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (ein pipenv elpy eimp projectile auctex graphviz-dot-mode lua-mode company intero paradox highlight-thing diff-hl idris-mode docker dockerfile-mode cider json-mode json-reformat restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
@@ -172,4 +172,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(ein:cell-input-area ((t nil)))
+ '(ein:cell-input-prompt ((t (:inherit header-line :weight bold))))
+ '(ein:cell-output-area ((t (:background "honeydew1"))) t))
