@@ -113,7 +113,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (ein pipenv elpy eimp projectile auctex graphviz-dot-mode lua-mode company intero paradox highlight-thing diff-hl idris-mode docker dockerfile-mode cider json-mode json-reformat restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (magithub ein pipenv elpy eimp projectile auctex graphviz-dot-mode lua-mode company intero paradox highlight-thing diff-hl idris-mode docker dockerfile-mode cider json-mode json-reformat restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
