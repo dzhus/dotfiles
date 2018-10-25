@@ -18,16 +18,6 @@
 (add-to-list 'auto-mode-alist
              '("\\.m$" . octave-mode))
 
-;; ;;; Show VC diffs in magit colors
-;; (require 'magit)
-
-;; (setq diff-added-face             'magit-diff-added)
-;; (setq diff-indicator-added-face   'magit-diff-added)
-;; (setq diff-removed-face           'magit-diff-removed)
-;; (setq diff-indicator-removed-face 'magit-diff-removed)
-;; (setq diff-hunk-header-face       'magit-diff-hunk-heading)
-;; (setq diff-function-face          'magit-diff-hunk-heading)
-
 ;;; Switch large default font on and off
 (defvar my/large-font nil "When t, default is switched to large font")
 

@@ -90,16 +90,10 @@
 
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-;; C-x v l is actually better than magit's log because in VC log entry
-;; diffs contain only changes to the file
-;;
-;; (global-set-key
-;;  (kbd "C-x v l")
-;;  #'(lambda ()
-;;      (interactive)
-;;      (if (eq 'Git (vc-backend (buffer-file-name (current-buffer))))
-;;          (magit-log-buffer-file)
-;;        (vc-print-log))))
+;; Magit shortcuts
 
 (require 'magit)
+
 (global-set-key (kbd "C-x v =") 'magit-diff-buffer-file)
+
+(global-set-key (kbd "C-x v l") 'magit-log-buffer-file)
