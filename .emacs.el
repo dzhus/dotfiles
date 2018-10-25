@@ -12,12 +12,6 @@
 (add-hook 'markdown-mode-hook 'my/common-text-hook)
 (add-hook 'text-mode-hook 'my/common-text-hook)
 
-;;;; Octave-mode
-(add-to-list 'auto-mode-alist
-             '("\\.oct$" . octave-mode))
-(add-to-list 'auto-mode-alist
-             '("\\.m$" . octave-mode))
-
 ;;; Switch large default font on and off
 (defvar my/large-font nil "When t, default is switched to large font")
 
@@ -53,9 +47,6 @@
 (flycheck-add-next-checker 'intero
                            '(warning . haskell-hlint))
 
-;; Enable completion in REPLs
-(add-hook 'cider-repl-mode-hook #'company-mode)
-(add-hook 'cider-mode-hook #'company-mode)
 
 (add-hook 'python-mode-hook #'pipenv-mode)
 (elpy-enable)
