@@ -59,5 +59,8 @@
 (load "~/.emacs-custom.el")
 (load "~/.emacs-keys.el")
 
+(push "~/.emacs.d/lisp" load-path)
+(load-library "mermaid.el")
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
