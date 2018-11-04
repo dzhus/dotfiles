@@ -43,16 +43,21 @@
 
 (require 'flycheck)
 (require 'intero)
-(require 'elpy)
 (flycheck-add-next-checker 'intero
                            '(warning . haskell-hlint))
 
-
+(require 'elpy)
 (add-hook 'python-mode-hook #'pipenv-mode)
 (elpy-enable)
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;; (require 'lsp-ui)
+;; (require 'lsp-haskell)
+;; (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+;; (add-hook 'haskell-mode-hook 'flycheck-mode)
+;; (add-hook 'haskell-mode-hook #'lsp-haskell-enable)
 
 (add-hook 'image-mode-hook #'eimp-mode)
 
