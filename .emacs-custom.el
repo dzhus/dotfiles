@@ -83,6 +83,8 @@
  '(markdown-reference-location (quote end))
  '(maxima-indent-style (quote perhaps-smart))
  '(menu-bar-mode nil)
+ '(mermaid-options "-w 1200")
+ '(mermaid-output-format (quote png))
  '(message-citation-line-format "%N wrote:")
  '(message-citation-line-function (quote message-insert-formatted-citation-line))
  '(message-directory "~/gnus/mail")
@@ -113,7 +115,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (magithub ein pipenv elpy eimp projectile auctex graphviz-dot-mode lua-mode company intero paradox highlight-thing diff-hl idris-mode docker dockerfile-mode cider json-mode json-reformat restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (lsp-haskell lsp-mode lsp-ui intero ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
