@@ -58,6 +58,8 @@
 
 (global-set-key (kbd "<f6>") 'my/switch-large-font)
 
+(global-set-key (kbd "C-<f6>") 'my/go-dark)
+
 (global-set-key (kbd "<f7>") 'flycheck-mode)
 
 (global-set-key (kbd "<f8>") 'highlight-thing-mode)

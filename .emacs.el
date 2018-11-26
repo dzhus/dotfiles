@@ -12,6 +12,13 @@
 (add-hook 'markdown-mode-hook 'my/common-text-hook)
 (add-hook 'text-mode-hook 'my/common-text-hook)
 
+(defun my/go-dark ()
+  (interactive)
+  (setq my/dark (if (boundp 'my/dark) (not my/dark) t))
+  (if my/dark
+      (load-theme 'solarized-light)
+    (load-theme 'solarized-dark)))
+
 ;;; Switch large default font on and off
 (defvar my/large-font nil "When t, default is switched to large font")
 
