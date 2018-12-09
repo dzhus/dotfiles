@@ -31,6 +31,10 @@
     (setq my/large-font (not my/large-font))))
 
 ;;; Switchable whitespace-cleanup hook
+(defun my/brittany ()
+  (interactive)
+  (shell-command (concat "brittany --write-mode inplace " (buffer-file-name))))
+
 (defvar my/whitespace-cleanup-switch t
   "When nil, `my/whitespace-cleanup' does nothing.")
 (make-variable-buffer-local 'my/whitespace-cleanup-switch)
