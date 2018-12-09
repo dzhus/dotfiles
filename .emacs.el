@@ -14,7 +14,7 @@
 
 (defun my/go-dark ()
   (interactive)
-  (setq my/dark (if (boundp 'my/dark) (not my/dark) t))
+  (setq my/dark (if (boundp 'my/dark) (not my/dark) nil))
   (if my/dark
       (load-theme 'solarized-light)
     (load-theme 'solarized-dark)))
