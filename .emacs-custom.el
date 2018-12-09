@@ -25,7 +25,7 @@
  '(custom-file "~/.emacs-custom.el")
  '(custom-safe-themes
    (quote
-    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(dired-dwim-target t)
  '(dired-listing-switches "-l")
  '(dired-recursive-deletes (quote always))
@@ -115,7 +115,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (lsp-haskell lsp-mode lsp-ui intero ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (pipenv org-present tide lsp-haskell lsp-mode lsp-ui intero ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
