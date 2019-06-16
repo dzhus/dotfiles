@@ -2,3 +2,4 @@ export PATH="/Users/dmitry.dzhus/.local/bin:/Users/dmitry.dzhus/Library/Python/3
 export WORKON_HOME=$HOME/.local/share/virtualenvs
 gpg-agent --daemon
 alias prp="pipenv run python"
+alias sha256="shasum -a256"
