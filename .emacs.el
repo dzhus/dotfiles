@@ -77,6 +77,26 @@
 (flycheck-add-next-checker 'intero
                            '(warning . haskell-hlint))
 
+(defun sql-threads ()
+  (interactive)
+  (let ((env (completing-read "Environment: " '("staging" "production")))
+        (user (completing-read "User: " '("analyticsro"))))
+    (let ((creds
+           (with-temp-buffer
+             (call-process "tscripts" nil t nil
+                           "ssm" "get-all" "-e" env
+                           "--path" (concat "/databases/rds-pg-threads-main/threads_main/" user))
+             (goto-char (point-min))
+             (json-read))))
+      (setq-default sql-database (alist-get 'db creds))
+      (setq-default sql-user (alist-get 'user creds))
+      (setq-default sql-server (replace-regexp-in-string
+                                "main" "main-replica-analytics"
+                                (alist-get 'host creds)))
+      (setenv "PGPASSWORD" (alist-get 'password creds))
+      (sql-postgres)
+      (setenv "PGPASSWORD"))))
+
 (add-hook 'python-mode-hook #'pipenv-mode)
 
 (add-hook 'image-mode-hook #'eimp-mode)
