@@ -25,7 +25,8 @@
  '(custom-file "~/.emacs-custom.el")
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
+    ("2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
+ '(default-input-method "russian-computer")
  '(dired-dwim-target t)
  '(dired-listing-switches "-l")
  '(dired-recursive-deletes (quote always))
@@ -57,6 +58,7 @@
  '(fill-individual-varying-indent t)
  '(font-lock-global-modes t)
  '(fringe-mode (quote (12 . 0)) nil (fringe))
+ '(graphviz-dot-auto-preview-on-save t)
  '(graphviz-dot-indent-width 4)
  '(ibuffer-mode-hook (quote (hl-line-mode)))
  '(ido-enable-flex-matching t)
@@ -65,7 +67,6 @@
  '(imenu-sort-function (quote imenu--sort-by-name))
  '(indent-tabs-mode nil)
  '(inferior-octave-program "octave-cli")
- '(intero-blacklist (quote ("~/projects/sparkle" "~/projects/inline-java")))
  '(intero-global-mode t nil (intero))
  '(ispell-extra-args (quote ("-d" "en_GB")))
  '(ispell-highlight-face (quote flyspell-incorrect))
@@ -115,7 +116,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (hide-mode-line pipenv org-present tide lsp-haskell lsp-mode lsp-ui intero ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (scala-mode alchemist intero rainbow-delimiters no-emoji tss hide-mode-line org-present tide ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
@@ -163,7 +164,7 @@
  '(smiley-regexp-alist nil)
  '(solarized-use-variable-pitch nil)
  '(tooltip-delay 0.4)
- '(tramp-chunksize 500 nil (tramp))
+ '(tramp-chunksize 500)
  '(use-file-dialog nil)
  '(user-full-name "Dmitry Dzhus")
  '(user-mail-address "dima@dzhus.org")
