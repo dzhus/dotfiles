@@ -116,7 +116,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (scala-mode alchemist intero rainbow-delimiters no-emoji tss hide-mode-line org-present tide ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (sqlformat scala-mode alchemist intero rainbow-delimiters no-emoji tss hide-mode-line org-present tide ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
@@ -163,6 +163,7 @@
  '(show-paren-style (quote mixed))
  '(smiley-regexp-alist nil)
  '(solarized-use-variable-pitch nil)
+ '(sqlformat-command (quote pgformatter))
  '(tooltip-delay 0.4)
  '(tramp-chunksize 500)
  '(use-file-dialog nil)

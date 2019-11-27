@@ -42,7 +42,10 @@
 (defun my/whitespace-cleanup ()
   (interactive)
   (if my/whitespace-cleanup-switch
-      (whitespace-cleanup)
+      (progn
+        (whitespace-cleanup)
+        (when (eq major-mode 'sql-mode)
+          (sqlformat-buffer)))
     (message "whitespace-cleanup has been ignored")))
 
 (defun my/whitespace-cleanup-switch ()
