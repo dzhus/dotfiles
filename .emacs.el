@@ -89,6 +89,12 @@
    '(lambda () (flycheck-add-next-checker 'haskell-dante
                 '(warning . haskell-hlint))))
 
+(add-hook 'typescript-mode-hook
+   (lambda ()
+     (tide-mode)
+     (tide-restart-server)
+     (company-mode)))
+
 (defun sql-threads ()
   (interactive)
   (let ((env (completing-read "Environment: " '("staging" "production")))
