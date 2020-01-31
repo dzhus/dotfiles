@@ -109,7 +109,7 @@
       (sql-postgres)
       (setenv "PGPASSWORD"))))
 
-(add-hook 'python-mode-hook #'pipenv-mode)
+;; (add-hook 'python-mode-hook #'pipenv-mode)
 
 (add-hook 'image-mode-hook #'eimp-mode)
 
