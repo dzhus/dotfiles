@@ -1,17 +1,17 @@
 ; -*- lexical-binding: t -*-
 (package-initialize)
 
+(setq use-package-always-ensure t)
+
 (defun my/common-text-hook ()
   (turn-on-auto-fill))
 
-(use-package org-mode
-  :ensure t
+(use-package org
   :init
   (add-hook 'org-mode-hook 'my/common-text-hook))
 
 ;;;; Markdown-mode
 (use-package markdown-mode
-  :ensure t
   :init
   (add-hook 'markdown-mode-hook 'my/common-text-hook)
   (add-hook 'text-mode-hook 'my/common-text-hook))
@@ -55,13 +55,13 @@
    "whitespace-cleanup is now %s"
    (if my/whitespace-cleanup-switch "on" "OFF")))
 
-(use-package flycheck :ensure t)
-(use-package projectile :ensure t)
+(use-package flycheck)
+
+(use-package projectile)
 
 ;;;; Haskell
 
 (use-package dante
-  :ensure t
   :after haskell-mode
   :commands 'dante-mode
   :init
@@ -73,11 +73,9 @@
 
 ;;;; Typescript
 
-(use-package tide
-  :ensure t)
+(use-package tide)
 
 (use-package typescript-mode
-  :ensure t
   :init
   (add-hook 'typescript-mode-hook
             (lambda ()
