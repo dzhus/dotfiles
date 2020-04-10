@@ -84,11 +84,13 @@
             '(lambda () (flycheck-add-next-checker 'haskell-dante
                 '(warning . haskell-hlint)))))
 
-(use-package flycheck)
+(use-package flycheck
+  :bind (("<f7>" . flycheck-mode)))
 
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
          ("C-x v l" . magit-log-buffer-file)
+         ("<f5>" . magit-status)
          ;; MBP Touch bar workaround
          ("C-5" . magit-status)))
 
@@ -103,7 +105,8 @@
 
 (use-package projectile
   :bind
-  (("C-c g" . projectile-find-file))
+  (("<f12>" . projectile-compile-project)
+   ("C-c g" . projectile-find-file))
   :bind-keymap
   ("C-c p" . projectile-command-map))
 
@@ -174,22 +177,11 @@
 ;; Fun row
 
 (global-set-key (kbd "<f2>") 'eshell)
-
-(global-set-key (kbd "<f5>") 'magit-status)
-
 (global-set-key (kbd "<f6>") 'my/switch-large-font)
-
 (global-set-key (kbd "C-<f6>") 'my/go-dark)
-
-(global-set-key (kbd "<f7>") 'flycheck-mode)
-
 (global-set-key (kbd "<f8>") 'highlight-thing-mode)
-
 (global-set-key (kbd "<f10>") 'whitespace-mode)
-
 (global-set-key (kbd "C-<f10>") 'my/whitespace-cleanup-switch)
-
-(global-set-key (kbd "<f12>") 'projectile-compile-project)
 
 ;; British keyboard workarounds
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
