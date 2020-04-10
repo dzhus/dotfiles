@@ -169,6 +169,7 @@
  '(tooltip-delay 0.4)
  '(tramp-chunksize 500)
  '(use-file-dialog nil)
+ '(use-package-always-ensure t)
  '(user-full-name "Dmitry Dzhus")
  '(user-mail-address "dima@dzhus.org")
  '(winner-mode t)
