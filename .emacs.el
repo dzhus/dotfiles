@@ -70,6 +70,9 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+(use-package auctex)
+(use-package company)
+
 (use-package counsel
   :bind
   (("M-x" . counsel-M-x)
@@ -82,12 +85,24 @@
   :init
   (add-hook 'dante-mode-hook
             '(lambda () (flycheck-add-next-checker 'haskell-dante
-                '(warning . haskell-hlint)))))
+                                                   '(warning . haskell-hlint)))))
+
+(use-package docker)
+(use-package dockerfile-mode)
+(use-package ein)
 
 (use-package flycheck
   :after haskell-mode
   :bind (("<f7>" . flycheck-mode))
   :hook (haskell-mode . flycheck-mode))
+
+(use-package graphviz-dot-mode)
+(use-package hide-mode-line)
+(use-package highlight-thing)
+(use-package ido-ubiquitous)
+(use-package idris-mode)
+(use-package json-mode)
+(use-package lua-mode)
 
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
@@ -103,6 +118,8 @@
          markdown-mode-map
          ("C-c a" . auto-fill-mode)))
 
+(use-package no-emoji)
+
 (use-package org
   :init
   (add-hook 'org-mode-hook 'my/common-text-hook))
@@ -114,7 +131,12 @@
   :bind-keymap
   ("C-c p" . projectile-command-map))
 
+(use-package restclient)
+(use-package solarized-theme)
+(use-package sqlformat)
+(use-package terraform-mode)
 (use-package tide)
+(use-package tss)
 
 (use-package typescript-mode
   :init
@@ -123,6 +145,8 @@
               (tide-mode)
               (tide-restart-server)
               (company-mode))))
+
+(use-package yaml-mode)
 
 ;;;; Built-in modes
 
