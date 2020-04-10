@@ -78,15 +78,16 @@
 (use-package dante
   :after haskell-mode
   :commands 'dante-mode
+  :hook (haskell-mode . dante-mode)
   :init
-  (add-hook 'haskell-mode-hook 'flycheck-mode)
-  (add-hook 'haskell-mode-hook 'dante-mode)
   (add-hook 'dante-mode-hook
             '(lambda () (flycheck-add-next-checker 'haskell-dante
                 '(warning . haskell-hlint)))))
 
 (use-package flycheck
-  :bind (("<f7>" . flycheck-mode)))
+  :after haskell-mode
+  :bind (("<f7>" . flycheck-mode))
+  :hook (haskell-mode . flycheck-mode))
 
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
@@ -160,8 +161,6 @@
 
 (global-set-key (kbd "C-c u")
                 'browse-url)
-
-
 
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
