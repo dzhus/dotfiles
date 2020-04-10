@@ -9,5 +9,7 @@ jobs:
     steps:
       - name: Install Emacs
         run: brew cask install emacs
+      - name: Clone project
+        uses: actions/checkout@v2
       - name: Run Emacs
         run: emacs --batch --script .emacs.el
