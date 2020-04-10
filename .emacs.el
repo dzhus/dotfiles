@@ -95,7 +95,9 @@
 (use-package markdown-mode
   :init
   (add-hook 'markdown-mode-hook 'my/common-text-hook)
-  (add-hook 'text-mode-hook 'my/common-text-hook))
+  :bind (:map
+         markdown-mode-map
+         ("C-c a" . auto-fill-mode)))
 
 (use-package org
   :init
@@ -117,6 +119,10 @@
               (tide-mode)
               (tide-restart-server)
               (company-mode))))
+
+;;;; Built-in modes
+
+(add-hook 'text-mode-hook 'my/common-text-hook)
 
 ;;;; Key bindings
 
@@ -149,15 +155,10 @@
 (global-set-key (kbd "<f1>") #'(lambda () (interactive)
                                  (find-file "~/mobile-sync/org/TODO.org")))
 
-
-;; Generic bindings
-
 (global-set-key (kbd "C-c u")
                 'browse-url)
 
-(add-hook 'markdown-mode-hook #'(lambda ()
-                                  (define-key markdown-mode-map "\C-ca"
-                                    'auto-fill-mode)))
+
 
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
