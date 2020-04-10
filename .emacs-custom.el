@@ -106,7 +106,6 @@
  '(org-export-with-section-numbers nil)
  '(org-fontify-done-headline t)
  '(org-hide-leading-stars t)
- '(org-latex-create-formula-image-program (quote imagemagick))
  '(org-log-done t)
  '(org-lowest-priority 68)
  '(org-preview-latex-default-process (quote imagemagick))
@@ -119,7 +118,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (attrap dante sqlformat alchemist rainbow-delimiters no-emoji tss hide-mode-line org-present tide ein eimp projectile auctex graphviz-dot-mode lua-mode company paradox highlight-thing diff-hl idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
