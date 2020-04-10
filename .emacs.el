@@ -4,13 +4,17 @@
 (defun my/common-text-hook ()
   (turn-on-auto-fill))
 
-;;;; Org-mode
-(add-hook 'org-mode-hook 'my/common-text-hook)
+(use-package org-mode
+  :ensure t
+  :init
+  (add-hook 'org-mode-hook 'my/common-text-hook))
 
 ;;;; Markdown-mode
-(require 'markdown-mode)
-(add-hook 'markdown-mode-hook 'my/common-text-hook)
-(add-hook 'text-mode-hook 'my/common-text-hook)
+(use-package markdown-mode
+  :ensure t
+  :init
+  (add-hook 'markdown-mode-hook 'my/common-text-hook)
+  (add-hook 'text-mode-hook 'my/common-text-hook))
 
 (defun my/go-dark ()
   (interactive)
@@ -67,10 +71,10 @@
                  (org-present-show-cursor)
                  (org-present-read-write)
                  (hide-mode-line-mode)))))
+(use-package flycheck :ensure t)
+(use-package projectile :ensure t)
 
-(require 'flycheck)
-(require 'dante)
-(require 'projectile)
+;;;; Haskell
 
 (use-package dante
   :ensure t
@@ -79,17 +83,25 @@
   :init
   (add-hook 'haskell-mode-hook 'flycheck-mode)
   (add-hook 'haskell-mode-hook 'dante-mode)
-  )
+  (add-hook 'dante-mode-hook
+            '(lambda () (flycheck-add-next-checker 'haskell-dante
+                '(warning . haskell-hlint)))))
 
-(add-hook 'dante-mode-hook
-   '(lambda () (flycheck-add-next-checker 'haskell-dante
-                '(warning . haskell-hlint))))
+;;;; Typescript
 
-(add-hook 'typescript-mode-hook
-   (lambda ()
-     (tide-mode)
-     (tide-restart-server)
-     (company-mode)))
+(use-package tide
+  :ensure t)
+
+(use-package typescript-mode
+  :ensure t
+  :init
+  (add-hook 'typescript-mode-hook
+            (lambda ()
+              (tide-mode)
+              (tide-restart-server)
+              (company-mode))))
+
+;;; Commands
 
 (defun sql-threads ()
   (interactive)
