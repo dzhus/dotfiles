@@ -195,7 +195,7 @@
 (use-package projectile
   :bind
   (("C-c g" . projectile-find-file))
-  :bind-map
+  :bind-keymap
   ("C-c p" . projectile-command-map))
 
 (use-package magit
