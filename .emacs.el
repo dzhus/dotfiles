@@ -101,7 +101,7 @@
       (setq-default sql-database (alist-get 'db creds))
       (setq-default sql-user (alist-get 'user creds))
       (setq-default sql-server (replace-regexp-in-string
-                                "main" "main-replica-analytics"
+                                "main" "main-replica-backups"
                                 (alist-get 'host creds)))
       (setenv "PGPASSWORD" (alist-get 'password creds))
       (sql-postgres)
