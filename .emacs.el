@@ -67,6 +67,9 @@
 
 ;;;; Packages
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (use-package counsel
   :bind
   (("M-x" . counsel-M-x)
