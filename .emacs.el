@@ -1,20 +1,10 @@
 ; -*- lexical-binding: t -*-
 (package-initialize)
 
-(setq use-package-always-ensure t)
+;;;; Custom helpers and commands
 
 (defun my/common-text-hook ()
   (turn-on-auto-fill))
-
-(use-package org
-  :init
-  (add-hook 'org-mode-hook 'my/common-text-hook))
-
-;;;; Markdown-mode
-(use-package markdown-mode
-  :init
-  (add-hook 'markdown-mode-hook 'my/common-text-hook)
-  (add-hook 'text-mode-hook 'my/common-text-hook))
 
 (defun my/go-dark ()
   (interactive)
@@ -55,36 +45,6 @@
    "whitespace-cleanup is now %s"
    (if my/whitespace-cleanup-switch "on" "OFF")))
 
-(use-package flycheck)
-
-(use-package projectile)
-
-;;;; Haskell
-
-(use-package dante
-  :after haskell-mode
-  :commands 'dante-mode
-  :init
-  (add-hook 'haskell-mode-hook 'flycheck-mode)
-  (add-hook 'haskell-mode-hook 'dante-mode)
-  (add-hook 'dante-mode-hook
-            '(lambda () (flycheck-add-next-checker 'haskell-dante
-                '(warning . haskell-hlint)))))
-
-;;;; Typescript
-
-(use-package tide)
-
-(use-package typescript-mode
-  :init
-  (add-hook 'typescript-mode-hook
-            (lambda ()
-              (tide-mode)
-              (tide-restart-server)
-              (company-mode))))
-
-;;; Commands
-
 (defun sql-threads ()
   (interactive)
   (let ((env (completing-read "Environment: " '("staging" "production")))
@@ -104,6 +64,60 @@
       (setenv "PGPASSWORD" (alist-get 'password creds))
       (sql-postgres)
       (setenv "PGPASSWORD"))))
+
+;;;; Packages
+
+(setq use-package-always-ensure t)
+
+(use-package counsel
+  :bind
+  (("M-x" . counsel-M-x)
+   ("C-c f" . counsel-git-grep)))
+
+(use-package dante
+  :after haskell-mode
+  :commands 'dante-mode
+  :init
+  (add-hook 'haskell-mode-hook 'flycheck-mode)
+  (add-hook 'haskell-mode-hook 'dante-mode)
+  (add-hook 'dante-mode-hook
+            '(lambda () (flycheck-add-next-checker 'haskell-dante
+                '(warning . haskell-hlint)))))
+
+(use-package flycheck)
+
+(use-package magit
+  :bind (("C-x v =" . magit-diff-buffer-file)
+         ("C-x v l" . magit-log-buffer-file)
+         ;; MBP Touch bar workaround
+         ("C-5" . magit-status)))
+
+(use-package markdown-mode
+  :init
+  (add-hook 'markdown-mode-hook 'my/common-text-hook)
+  (add-hook 'text-mode-hook 'my/common-text-hook))
+
+(use-package org
+  :init
+  (add-hook 'org-mode-hook 'my/common-text-hook))
+
+(use-package projectile
+  :bind
+  (("C-c g" . projectile-find-file))
+  :bind-keymap
+  ("C-c p" . projectile-command-map))
+
+(use-package tide)
+
+(use-package typescript-mode
+  :init
+  (add-hook 'typescript-mode-hook
+            (lambda ()
+              (tide-mode)
+              (tide-restart-server)
+              (company-mode))))
+
+;;;; Key bindings
 
 ;; MS NEK 4k bindings
 (global-set-key (kbd "<XF86Forward>")
@@ -145,8 +159,7 @@
                                     'auto-fill-mode)))
 
 (require 'ibuffer)
-(global-set-key (kbd "C-x C-b")
-                'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Windows & navigation
 
@@ -177,23 +190,6 @@
 (global-set-key (kbd "C-<f10>") 'my/whitespace-cleanup-switch)
 
 (global-set-key (kbd "<f12>") 'projectile-compile-project)
-
-(use-package counsel
-  :bind
-  (("M-x" . counsel-M-x)
-   ("C-c f" . counsel-git-grep)))
-
-(use-package projectile
-  :bind
-  (("C-c g" . projectile-find-file))
-  :bind-keymap
-  ("C-c p" . projectile-command-map))
-
-(use-package magit
-  :bind (("C-x v =" . magit-diff-buffer-file)
-         ("C-x v l" . magit-log-buffer-file)
-         ;; MBP Touch bar workaround
-         ("C-5" . magit-status)))
 
 ;; British keyboard workarounds
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
