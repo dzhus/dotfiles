@@ -132,7 +132,7 @@
                 'calc)
 
 (global-set-key (kbd "<f1>") #'(lambda () (interactive)
-                                 (find-file "~/Phone/Sync/org/TODO.org")))
+                                 (find-file "~/mobile-sync/org/TODO.org")))
 
 
 ;; Generic bindings
