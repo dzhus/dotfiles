@@ -187,7 +187,6 @@
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
 (define-key isearch-mode-map (kbd "£")
   '(lambda () (interactive) (isearch-process-search-char ?\#)))
-(global-set-key (kbd "M-c") 'kill-ring-save) ;; ? why do I need this 2018/07 ?
 
 (push "~/.emacs.d/lisp" load-path)
 (load-library "mermaid.el")
