@@ -1,0 +1,13 @@
+name: Test
+on:
+  pull_request:
+  push:
+jobs:
+  emacs_test:
+    name: Test Emacs configs
+    runs-on: macos-latest
+    steps:
+      - name: Install Homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+      - name: Install Emacs
+        run: brew cask install emacs
