@@ -105,11 +105,6 @@
       (sql-postgres)
       (setenv "PGPASSWORD"))))
 
-(load "~/.emacs-custom.el")
-
-(push "~/.emacs.d/lisp" load-path)
-(load-library "mermaid.el")
-
 ;; MS NEK 4k bindings
 (global-set-key (kbd "<XF86Forward>")
                 (lambda ()
@@ -206,6 +201,11 @@
 (define-key isearch-mode-map (kbd "£")
   '(lambda () (interactive) (isearch-process-search-char ?\#)))
 (global-set-key (kbd "M-c") 'kill-ring-save) ;; ? why do I need this 2018/07 ?
+
+(push "~/.emacs.d/lisp" load-path)
+(load-library "mermaid.el")
+
+(load "~/.emacs-custom.el")
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
