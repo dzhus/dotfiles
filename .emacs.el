@@ -178,8 +178,6 @@
 
 (global-set-key (kbd "<f12>") 'projectile-compile-project)
 
-;; MBP Touch bar workarounds
-
 (use-package counsel
   :bind
   (("M-x" . counsel-M-x)
@@ -194,6 +192,7 @@
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
          ("C-x v l" . magit-log-buffer-file)
+         ;; MBP Touch bar workaround
          ("C-5" . magit-status)))
 
 ;; British keyboard workarounds
