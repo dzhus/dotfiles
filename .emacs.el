@@ -187,33 +187,27 @@
 
 ;; MBP Touch bar workarounds
 
-(global-set-key (kbd "C-5") 'magit-status)
+(use-package counsel
+  :bind
+  (("M-x" . counsel-M-x)
+   ("C-c f" . counsel-git-grep)))
+
+(use-package projectile
+  :bind
+  (("C-c g" . projectile-find-file))
+  :bind-map
+  ("C-c p" . projectile-command-map))
+
+(use-package magit
+  :bind (("C-x v =" . magit-diff-buffer-file)
+         ("C-x v l" . magit-log-buffer-file)
+         ("C-5" . magit-status)))
 
 ;; British keyboard workarounds
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
 (define-key isearch-mode-map (kbd "£")
   '(lambda () (interactive) (isearch-process-search-char ?\#)))
 (global-set-key (kbd "M-c") 'kill-ring-save) ;; ? why do I need this 2018/07 ?
-
-;; Ivy
-
-(global-set-key (kbd "M-x") 'counsel-M-x)
-
-(global-set-key (kbd "C-c f") 'counsel-git-grep)
-
-;; Projectile
-
-(global-set-key (kbd "C-c g") 'projectile-find-file)
-
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
-;; Magit shortcuts
-
-(require 'magit)
-
-(global-set-key (kbd "C-x v =") 'magit-diff-buffer-file)
-
-(global-set-key (kbd "C-x v l") 'magit-log-buffer-file)
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
