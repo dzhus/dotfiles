@@ -9,6 +9,7 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(auto-fill-inhibit-regexp nil)
  '(auto-insert-mode t)
+ '(auto-revert-mode-text "")
  '(before-save-hook (quote (my/whitespace-cleanup)))
  '(bibtex-field-delimiters (quote double-quotes))
  '(browse-url-browser-function (quote browse-url-default-browser))
@@ -130,6 +131,7 @@
  '(projectile-git-command "git ls-files -zc --exclude-standard")
  '(projectile-global-mode t)
  '(projectile-mode t nil (projectile))
+ '(projectile-mode-line-prefix " ")
  '(projectile-use-git-grep t)
  '(python-indent-guess-indent-offset nil)
  '(restclient-content-type-modes
