@@ -86,7 +86,6 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-(use-package auctex)
 (use-package company)
 
 (use-package counsel
@@ -151,6 +150,10 @@
 (use-package solarized-theme)
 (use-package sqlformat)
 (use-package terraform-mode)
+
+(use-package tex
+  :ensure auctex)
+
 (use-package tide)
 (use-package tss)
 
