@@ -239,8 +239,8 @@
 (define-key isearch-mode-map (kbd "£")
   '(lambda () (interactive) (isearch-process-search-char ?\#)))
 
-(push "~/.emacs.d/lisp" load-path)
-(load-library "mermaid.el")
+;; (push "~/.emacs.d/lisp" load-path)
+;; (load-library "mermaid.el")
 
 (load "~/.emacs-custom.el")
 
