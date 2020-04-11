@@ -242,7 +242,11 @@
 ;; (push "~/.emacs.d/lisp" load-path)
 ;; (load-library "mermaid.el")
 
-(load "~/.emacs-custom.el")
+;; Load .emacs-custom from the same directory as this file (this is to
+;; make it work on CI)
+(load (expand-file-name ".emacs-custom.el"
+                        (when load-file-name
+                          (file-name-directory load-file-name))))
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
