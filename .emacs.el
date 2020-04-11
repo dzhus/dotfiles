@@ -91,6 +91,7 @@
 (use-package counsel
   :bind
   (("C-c f" . counsel-git-grep))
+  :delight
   :init (counsel-mode 1))
 
 (use-package dante
@@ -102,6 +103,7 @@
             '(lambda () (flycheck-add-next-checker 'haskell-dante
                                                    '(warning . haskell-hlint)))))
 
+(use-package delight)
 (use-package docker)
 (use-package dockerfile-mode)
 (use-package ein)
@@ -117,7 +119,8 @@
 (use-package idris-mode)
 
 (use-package ivy
-  :init (ivy-mode 1))
+  :init (ivy-mode 1)
+  :delight)
 
 (use-package json-mode)
 (use-package lua-mode)
