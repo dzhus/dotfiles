@@ -114,8 +114,11 @@
 (use-package graphviz-dot-mode)
 (use-package hide-mode-line)
 (use-package highlight-thing)
-(use-package ido-ubiquitous)
 (use-package idris-mode)
+
+(use-package ivy
+  :init (ivy-mode 1))
+
 (use-package json-mode)
 (use-package lua-mode)
 
@@ -148,6 +151,10 @@
 
 (use-package restclient)
 (use-package solarized-theme)
+
+(use-package swiper
+  :bind (("C-s" . swiper-isearch)))
+
 (use-package sqlformat)
 (use-package terraform-mode)
 
