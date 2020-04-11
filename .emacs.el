@@ -90,8 +90,8 @@
 
 (use-package counsel
   :bind
-  (("M-x" . counsel-M-x)
-   ("C-c f" . counsel-git-grep)))
+  (("C-c f" . counsel-git-grep))
+  :init (counsel-mode 1))
 
 (use-package dante
   :after haskell-mode

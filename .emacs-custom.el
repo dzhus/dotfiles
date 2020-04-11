@@ -65,8 +65,6 @@
  '(graphviz-dot-auto-preview-on-save t)
  '(graphviz-dot-indent-width 4)
  '(ibuffer-mode-hook (quote (hl-line-mode)))
- '(ido-enable-flex-matching t)
- '(ido-mode (quote both) nil (ido))
  '(imenu-auto-rescan t)
  '(imenu-sort-function (quote imenu--sort-by-name))
  '(indent-tabs-mode nil)
@@ -118,7 +116,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel ido-ubiquitous markdown-mode magit haskell-mode)))
+    (magit solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel markdown-mode haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
