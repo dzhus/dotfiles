@@ -107,6 +107,7 @@
 (use-package docker)
 (use-package dockerfile-mode)
 (use-package ein)
+(use-package elixir-mode)
 
 (use-package flycheck
   :after haskell-mode
