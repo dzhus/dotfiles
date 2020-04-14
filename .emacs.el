@@ -86,7 +86,8 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-(use-package company)
+(use-package company
+  :hook (haskell-mode . company-mode))
 
 (use-package counsel
   :bind
