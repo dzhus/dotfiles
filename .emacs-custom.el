@@ -10,7 +10,7 @@
  '(auto-fill-inhibit-regexp nil)
  '(auto-insert-mode t)
  '(auto-revert-mode-text "")
- '(before-save-hook (quote (my/whitespace-cleanup)))
+ '(before-save-hook (quote (my/whitespace-cleanup markdown-toc-refresh-toc)))
  '(bibtex-field-delimiters (quote double-quotes))
  '(browse-url-browser-function (quote browse-url-default-browser))
  '(calendar-week-start-day 1)
@@ -117,7 +117,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (delight magit solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel markdown-mode haskell-mode)))
+    (markdown-toc delight magit solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel markdown-mode haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote

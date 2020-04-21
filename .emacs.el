@@ -141,6 +141,8 @@
          markdown-mode-map
          ("C-c a" . auto-fill-mode)))
 
+(use-package markdown-toc)
+
 (use-package no-emoji)
 
 (use-package org
