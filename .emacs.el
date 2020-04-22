@@ -185,6 +185,10 @@
 
 (add-hook 'text-mode-hook 'my/common-text-hook)
 
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (local-set-key (kbd "M-r") 'counsel-esh-history)))
+
 ;;;; Key bindings
 
 ;; MS NEK 4k bindings
