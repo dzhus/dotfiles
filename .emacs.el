@@ -87,7 +87,9 @@
 (setq use-package-always-ensure t)
 
 (use-package company
-  :hook (haskell-mode . company-mode))
+  :hook ((haskell-mode . company-mode)
+         (cider-mode . company-mode)
+         (cider-repl-mode . company-mode)))
 
 (use-package counsel
   :bind
@@ -104,15 +106,10 @@
             '(lambda () (flycheck-add-next-checker 'haskell-dante
                                                    '(warning . haskell-hlint)))))
 
-(use-package cider)
+(use-package cider
+  :hook (clojure-mode . cider-mode))
 
-(use-package clojure-mode
-  :init
-  (add-hook 'clojure-mode-hook
-            (lambda ()
-              (cider-jack-in)
-              (company-mode))))
-
+(use-package clojure-mode)
 (use-package delight)
 (use-package docker)
 (use-package dockerfile-mode)
