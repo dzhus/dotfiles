@@ -104,6 +104,15 @@
             '(lambda () (flycheck-add-next-checker 'haskell-dante
                                                    '(warning . haskell-hlint)))))
 
+(use-package cider)
+
+(use-package clojure-mode
+  :init
+  (add-hook 'clojure-mode-hook
+            (lambda ()
+              (cider-jack-in)
+              (company-mode))))
+
 (use-package delight)
 (use-package docker)
 (use-package dockerfile-mode)

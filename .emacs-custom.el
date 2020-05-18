@@ -117,7 +117,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (markdown-toc delight magit solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel markdown-mode haskell-mode)))
+    (cider markdown-toc delight magit solarized-theme use-package dante sqlformat no-emoji tss hide-mode-line org-present tide ein projectile auctex graphviz-dot-mode lua-mode company highlight-thing idris-mode docker dockerfile-mode json-mode restclient terraform-mode yaml-mode counsel markdown-mode haskell-mode)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
