@@ -69,7 +69,9 @@
 (use-package company
   :hook ((haskell-mode . company-mode)
          (cider-mode . company-mode)
-         (cider-repl-mode . company-mode)))
+         (cider-repl-mode . company-mode)
+         (racket-mode . company-mode)
+         (racket-repl-mode . company-mode)))
 
 (use-package counsel
   :bind
@@ -142,6 +144,7 @@
   :bind-keymap
   ("C-c p" . projectile-command-map))
 
+(use-package racket-mode)
 (use-package restclient)
 (use-package solarized-theme)
 
