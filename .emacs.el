@@ -97,6 +97,7 @@
 (use-package dockerfile-mode)
 (use-package ein)
 (use-package elixir-mode)
+(use-package exec-path-from-shell)
 
 (use-package flycheck
   :after haskell-mode
@@ -241,6 +242,11 @@
 
 ;; (push "~/.emacs.d/lisp" load-path)
 ;; (load-library "mermaid.el")
+
+
+;; Fix $PATH
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Load .emacs-custom from the same directory as this file (this is to
 ;; make it work on CI)
