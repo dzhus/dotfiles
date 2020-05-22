@@ -1,6 +1,6 @@
 # dotfiles
 
-Changes again
+To set up:
 
 ```
 ln -s ~/projects/dotfiles/.emacs-custom.el ~/.emacs-custom.el
