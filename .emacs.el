@@ -22,13 +22,6 @@
 (defun my/common-text-hook ()
   (turn-on-auto-fill))
 
-(defun my/go-dark ()
-  (interactive)
-  (setq my/dark (if (boundp 'my/dark) (not my/dark) nil))
-  (if my/dark
-      (load-theme 'solarized-light)
-    (load-theme 'solarized-dark)))
-
 ;;; Switch large default font on and off
 (defvar my/large-font nil "When t, default is switched to large font")
 
@@ -257,3 +250,26 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+;;;; Lights out at 6PM
+
+(defvar my/theme (car custom-enabled-themes) "Last theme loaded with Custom or `my/change-sides'.")
+
+(defun my/change-sides ()
+  (interactive)
+  (setq my/theme (cond ((and (boundp 'my/theme) (not (eq my/theme 'solarized-dark))) 'solarized-dark)
+                       (t 'solarized-light)))
+  (load-theme my/theme))
+
+(defun my/theme-of-hour ()
+  "Load dark theme between 6PM and 8AM."
+  (interactive)
+  (let* ((hour (elt (parse-time-string (current-time-string)) 2))
+         (theme (if (or (>= 18 hour) (<= 8 hour))
+                    'solarized-dark
+                  'solarized-light)))
+    (when (not (eq my/theme theme))
+      (setq my/theme theme)
+      (load-theme my/theme))))
+
+(run-at-time "10 sec" 10 #'my/theme-of-hour)
