@@ -114,6 +114,7 @@
   :delight)
 
 (use-package json-mode)
+(use-package lsp-mode)
 (use-package lua-mode)
 
 (use-package magit
