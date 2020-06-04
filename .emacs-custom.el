@@ -14,6 +14,7 @@
  '(bibtex-field-delimiters (quote double-quotes))
  '(browse-url-browser-function (quote browse-url-default-browser))
  '(calendar-week-start-day 1)
+ '(cider-prompt-for-symbol nil)
  '(coffee-tab-width 2)
  '(color-theme-illegal-default-attributes (quote (:height :width :family)))
  '(comint-password-prompt-regexp
