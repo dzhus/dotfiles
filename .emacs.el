@@ -265,7 +265,7 @@
   "Load dark theme between 6PM and 8AM."
   (interactive)
   (let* ((hour (elt (parse-time-string (current-time-string)) 2))
-         (theme (if (or (>= 18 hour) (<= 8 hour))
+         (theme (if (or (>= hour 18) (<= hour 8))
                     'solarized-dark
                   'solarized-light)))
     (when (not (eq my/theme theme))
