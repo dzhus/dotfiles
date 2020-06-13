@@ -80,7 +80,6 @@
 (use-package docker)
 (use-package dockerfile-mode)
 (use-package ein)
-(use-package elixir-mode)
 (use-package exec-path-from-shell)
 
 (use-package flycheck
@@ -152,17 +151,6 @@
 
 (use-package tex
   :ensure auctex)
-
-(use-package tide)
-(use-package tss)
-
-(use-package typescript-mode
-  :init
-  (add-hook 'typescript-mode-hook
-            (lambda ()
-              (tide-mode)
-              (tide-restart-server)
-              (company-mode))))
 
 (use-package yaml-mode)
 
