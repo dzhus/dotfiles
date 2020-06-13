@@ -72,15 +72,6 @@
   :delight
   :init (counsel-mode 1))
 
-(use-package dante
-  :after haskell-mode
-  :commands 'dante-mode
-  :hook (haskell-mode . dante-mode)
-  :init
-  (add-hook 'dante-mode-hook
-            '(lambda () (flycheck-add-next-checker 'haskell-dante
-                                                   '(warning . haskell-hlint)))))
-
 (use-package cider
   :hook (clojure-mode . cider-mode))
 
@@ -107,7 +98,17 @@
   :delight)
 
 (use-package json-mode)
-(use-package lsp-mode)
+
+(use-package lsp-mode
+  :hook (haskell-mode . lsp)
+  :commands lsp)
+
+(use-package lsp-haskell
+  :init
+  (add-hook 'haskell-mode-hook
+            '(lambda () (flycheck-add-next-checker 'lsp
+                                                   '(warning . haskell-hlint)))))
+
 (use-package lua-mode)
 
 (use-package magit

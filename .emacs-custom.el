@@ -76,6 +76,8 @@
  '(kill-ring-max 100)
  '(longlines-show-hard-newlines t)
  '(longlines-wrap-follows-window-size t)
+ '(lsp-haskell-process-args-hie nil)
+ '(lsp-haskell-process-path-hie "ghcide")
  '(lua-indent-level 2)
  '(magit-status-sections-hook
    (quote
@@ -118,7 +120,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (lsp exec-path-from-shells yaml-mode use-package tss tide terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit lua-mode idris-mode highlight-thing hide-mode-line graphviz-dot-mode elixir-mode ein eglot dockerfile-mode docker delight dante counsel cider auctex)))
+    (lsp-haskell lsp exec-path-from-shells yaml-mode use-package tss tide terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit lua-mode idris-mode highlight-thing hide-mode-line graphviz-dot-mode elixir-mode ein eglot dockerfile-mode docker delight counsel cider auctex)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote
