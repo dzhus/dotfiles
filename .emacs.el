@@ -132,6 +132,8 @@
   :init
   (add-hook 'org-mode-hook 'my/common-text-hook))
 
+(use-package origami)
+
 (use-package projectile
   :bind
   (("<f12>" . projectile-compile-project)
