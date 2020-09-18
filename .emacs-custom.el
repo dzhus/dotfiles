@@ -66,6 +66,7 @@
  '(fill-individual-varying-indent t)
  '(font-lock-global-modes t)
  '(fringe-mode (quote (12 . 0)) nil (fringe))
+ '(git-link-use-commit t)
  '(graphviz-dot-auto-preview-on-save t)
  '(graphviz-dot-indent-width 4)
  '(ibuffer-mode-hook (quote (hl-line-mode)))
@@ -122,7 +123,7 @@
      ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit lua-mode idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex)))
+    (git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit lua-mode idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex)))
  '(paradox-github-token t)
  '(password-word-equivalents
    (quote

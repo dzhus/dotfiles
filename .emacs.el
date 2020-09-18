@@ -87,6 +87,7 @@
   :bind (("<f7>" . flycheck-mode))
   :hook (haskell-mode . flycheck-mode))
 
+(use-package git-link)
 (use-package graphviz-dot-mode)
 (use-package hide-mode-line)
 (use-package highlight-thing)
