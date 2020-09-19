@@ -103,12 +103,7 @@
   :hook (haskell-mode . lsp)
   :commands lsp)
 
-(use-package lsp-haskell
-  :init
-  (add-hook 'haskell-mode-hook
-            '(lambda () (flycheck-add-next-checker 'lsp
-                                                   '(warning . haskell-hlint)))))
-
+(use-package lsp-haskell)
 (use-package lua-mode)
 
 (use-package magit
@@ -126,7 +121,6 @@
          ("C-c a" . auto-fill-mode)))
 
 (use-package markdown-toc)
-
 (use-package no-emoji)
 
 (use-package org

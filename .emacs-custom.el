@@ -81,6 +81,7 @@
  '(longlines-wrap-follows-window-size t)
  '(lsp-haskell-process-args-hie nil)
  '(lsp-haskell-process-path-hie "ghcide")
+ '(lsp-haskell-server-path "haskell-language-server-wrapper")
  '(lua-indent-level 2)
  '(magit-status-sections-hook
    (quote
