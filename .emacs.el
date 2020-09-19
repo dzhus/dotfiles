@@ -104,7 +104,6 @@
   :commands lsp)
 
 (use-package lsp-haskell)
-(use-package lua-mode)
 
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
