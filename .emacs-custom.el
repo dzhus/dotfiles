@@ -126,6 +126,7 @@
  '(preview-transparent-color "gray90")
  '(projectile-completion-system 'ivy)
  '(projectile-git-command "git ls-files -zc --exclude-standard")
+ '(projectile-git-submodule-command "")
  '(projectile-global-mode t)
  '(projectile-mode t nil (projectile))
  '(projectile-mode-line-prefix " ")
