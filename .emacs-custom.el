@@ -14,6 +14,7 @@
  '(bibtex-field-delimiters 'double-quotes)
  '(browse-url-browser-function 'browse-url-default-browser)
  '(calendar-week-start-day 1)
+ '(cider-lein-parameters "with-profile -user repl :headless :host localhost")
  '(cider-prompt-for-symbol nil)
  '(clojure-align-forms-automatically t)
  '(clojure-indent-style 'align-arguments)
