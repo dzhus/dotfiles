@@ -163,6 +163,7 @@
  '(smiley-regexp-alist nil)
  '(solarized-use-variable-pitch nil)
  '(sqlformat-command 'pgformatter)
+ '(tool-bar-mode nil)
  '(tooltip-delay 0.4)
  '(tramp-chunksize 500)
  '(use-file-dialog nil)
