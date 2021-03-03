@@ -85,7 +85,10 @@
 (use-package flycheck
   :after haskell-mode
   :bind (("<f7>" . flycheck-mode))
-  :hook (haskell-mode . flycheck-mode))
+  :hook ((haskell-mode . flycheck-mode)
+         (clojure-mode . flycheck-mode)))
+
+(use-package flycheck-clj-kondo)
 
 (use-package git-link)
 (use-package graphviz-dot-mode)
