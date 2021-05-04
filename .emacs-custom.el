@@ -39,6 +39,7 @@
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(elpy-modules
    '(elpy-module-company elpy-module-eldoc elpy-module-sane-defaults))
+ '(eshell-history-size 1024)
  '(eshell-output-filter-functions
    '(eshell-handle-ansi-color eshell-handle-control-codes eshell-watch-for-password-prompt eshell-truncate-buffer))
  '(eshell-prompt-function
