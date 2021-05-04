@@ -108,8 +108,8 @@
  '(org-fontify-done-headline t)
  '(org-hide-leading-stars t)
  '(org-log-done t)
- '(org-lowest-priority 68)
  '(org-preview-latex-default-process 'imagemagick)
+ '(org-priority-lowest 68)
  '(org-todo-keywords '("TODO" "IN PROGRESS" "DONE"))
  '(outline-regexp "[\\#\\*]+" t)
  '(package-archives
