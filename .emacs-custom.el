@@ -36,6 +36,7 @@
  '(dired-listing-switches "-l")
  '(dired-recursive-deletes 'always)
  '(doc-view-resolution 120)
+ '(ediff-merge-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(elpy-modules
    '(elpy-module-company elpy-module-eldoc elpy-module-sane-defaults))
