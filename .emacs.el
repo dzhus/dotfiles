@@ -75,7 +75,19 @@
 (use-package cider
   :hook (clojure-mode . cider-mode))
 
-(use-package clojure-mode)
+(use-package clojure-mode
+  :config
+  (define-clojure-indent
+    (defroutes 'defun)
+    (GET 2)
+    (POST 2)
+    (PUT 2)
+    (DELETE 2)
+    (HEAD 2)
+    (ANY 2)
+    (context 2)
+    (match 1)))
+
 (use-package delight)
 (use-package docker)
 (use-package dockerfile-mode)
