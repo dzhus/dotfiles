@@ -67,6 +67,7 @@
  '(graphviz-dot-auto-preview-on-save t)
  '(graphviz-dot-indent-width 4)
  '(ibuffer-mode-hook '(hl-line-mode))
+ '(idris-interpreter-path "idris2")
  '(imenu-auto-rescan t)
  '(imenu-sort-function 'imenu--sort-by-name)
  '(indent-tabs-mode nil)
