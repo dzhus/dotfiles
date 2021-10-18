@@ -143,6 +143,9 @@
 
 (use-package origami)
 
+(use-package parinfer-rust-mode
+  :hook emacs-lisp-mode)
+
 (use-package projectile
   :bind
   (("<f12>" . projectile-compile-project)
