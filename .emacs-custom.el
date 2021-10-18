@@ -17,7 +17,7 @@
  '(cider-lein-parameters "with-profile -user repl :headless :host localhost")
  '(cider-prompt-for-symbol nil)
  '(clojure-align-forms-automatically t)
- '(clojure-indent-style 'align-arguments)
+ '(clojure-indent-style 'always-align)
  '(coffee-tab-width 2)
  '(color-theme-illegal-default-attributes '(:height :width :family))
  '(comint-password-prompt-regexp
