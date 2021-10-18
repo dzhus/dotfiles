@@ -144,7 +144,7 @@
 (use-package origami)
 
 (use-package parinfer-rust-mode
-  :hook emacs-lisp-mode)
+  :hook (clojure-mode emacs-lisp-mode))
 
 (use-package projectile
   :bind
