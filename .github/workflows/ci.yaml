@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Install Emacs
-        run: brew cask install emacs
+        run: brew --cask install emacs
       - name: Clone project
         uses: actions/checkout@v2
       - name: Run Emacs
