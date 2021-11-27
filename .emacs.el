@@ -59,6 +59,9 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+(use-package antlr-mode
+  :mode "\\.g4\\'")
+
 (use-package company
   :hook ((haskell-mode . company-mode)
          (cider-mode . company-mode)

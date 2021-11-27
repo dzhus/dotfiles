@@ -178,6 +178,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(antlr-ruledef ((t (:inherit font-lock-function-name-face :weight bold))))
+ '(antlr-ruleref ((t (:inherit font-lock-function-name-face))))
+ '(antlr-syntax ((t (:inherit font-lock-builtin-face :weight bold))))
+ '(antlr-tokendef ((t (:inherit font-lock-type-face :weight bold))))
+ '(antlr-tokenref ((t (:inherit font-lock-type-face))))
  '(ein:cell-input-area ((t nil)))
  '(ein:cell-input-prompt ((t (:inherit header-line :weight bold))))
  '(ein:cell-output-area ((t (:inherit highlight))) t))
