@@ -16,6 +16,7 @@
  '(calendar-week-start-day 1)
  '(cider-lein-parameters "with-profile -user repl :headless :host localhost")
  '(cider-prompt-for-symbol nil)
+ '(cider-repl-pop-to-buffer-on-connect 'display-only)
  '(clojure-align-forms-automatically t)
  '(clojure-indent-style 'always-align)
  '(coffee-tab-width 2)
