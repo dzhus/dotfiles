@@ -113,15 +113,12 @@
  '(org-priority-lowest 68)
  '(org-todo-keywords '("TODO" "IN PROGRESS" "DONE"))
  '(outline-regexp "[\\#\\*]+" t)
- '(package-archives
-   '(("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.org/packages/")
-     ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")))
  '(package-selected-packages
-   '(parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex))
+   '(plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex))
  '(paradox-github-token t)
  '(password-word-equivalents
    '("password" "passcode" "passphrase" "pass phrase" "암호" "パスワード" "ପ୍ରବେଶ ସଙ୍କେତ" "ពាក្យសម្ងាត់" "adgangskode" "contraseña" "contrasenya" "geslo" "hasło" "heslo" "iphasiwedi" "jelszó" "lösenord" "lozinka" "mật khẩu" "mot de passe" "parola" "pasahitza" "passord" "passwort" "pasvorto" "salasana" "senha" "slaptažodis" "wachtwoord" "كلمة السر" "ססמה" "лозинка" "пароль" "गुप्तशब्द" "शब्दकूट" "પાસવર્ડ" "సంకేతపదము" "ਪਾਸਵਰਡ" "ಗುಪ್ತಪದ" "கடவுச்சொல்" "അടയാളവാക്ക്" "গুপ্তশব্দ" "পাসওয়ার্ড" "රහස්පදය" "密码" "密碼" "PIN"))
+ '(plantuml-default-exec-mode 'executable)
  '(po-auto-edit-with-msgid nil)
  '(pr-faces-p t)
  '(preview-scale-function 1.2)
