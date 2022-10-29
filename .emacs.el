@@ -169,7 +169,32 @@
 (use-package tex
   :ensure auctex)
 
-(use-package yaml-mode)
+(use-package yaml-mode
+  :init
+  (add-hook 'yaml-mode-hook 'my/yaml-mode-hook))
+
+;;;; Actionlint support
+
+(defun my/yaml-mode-hook ()
+  (when (string-match ".github/workflows" (buffer-file-name))
+    (flycheck-select-checker 'actionlint)
+    (flycheck-mode 1)))
+
+(defun flycheck-increment-error-end-columns (errors)
+     (seq-do (lambda (err)
+               (cl-incf (flycheck-error-end-column err)))
+             errors)
+     errors)
+
+(flycheck-define-checker actionlint
+  "Github Actions workflow linter.
+
+See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
+  :command ("actionlint" "-format" "{{range $err := .}}{{$err.Filepath}}:{{$err.Line}}:{{$err.Column}}:{{$err.EndColumn}}:{{$err.Message}}\n{{end}}" source)
+  :modes yaml-mode
+  :error-filter flycheck-increment-error-end-columns
+  :error-patterns
+  ((error line-start (file-name) ":" line ":" column ":" end-column ":" (message) line-end)))
 
 ;;;; Built-in modes
 
@@ -279,3 +304,4 @@
       (load-theme my/theme))))
 
 (run-at-time "10 sec" 10 #'my/theme-of-hour)
+
