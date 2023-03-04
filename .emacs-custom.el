@@ -101,7 +101,7 @@
  '(org-todo-keywords '("TODO" "IN PROGRESS" "DONE"))
  '(outline-regexp "[\\#\\*]+" t)
  '(package-selected-packages
-   '(plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex))
+   '(tide typescript-mode plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex))
  '(paradox-github-token t)
  '(plantuml-default-exec-mode 'executable)
  '(po-auto-edit-with-msgid nil)
@@ -150,6 +150,7 @@
  '(tool-bar-mode nil)
  '(tooltip-delay 0.4)
  '(tramp-chunksize 500)
+ '(typescript-indent-level 2)
  '(use-file-dialog nil)
  '(use-package-always-ensure t)
  '(user-full-name "Dmitry Dzhus")

@@ -166,6 +166,17 @@
 (use-package sqlformat)
 (use-package terraform-mode)
 
+(use-package tide)
+(use-package tss)
+
+(use-package typescript-mode
+  :init
+  (add-hook 'typescript-mode-hook
+            (lambda ()
+              (tide-mode)
+              (tide-restart-server)
+              (company-mode))))
+
 (use-package tex
   :ensure auctex)
 
