@@ -42,19 +42,6 @@
  '(eshell-history-size 1024)
  '(eshell-output-filter-functions
    '(eshell-handle-ansi-color eshell-handle-control-codes eshell-watch-for-password-prompt eshell-truncate-buffer))
- '(eshell-prompt-function
-   (lambda nil
-     (concat
-      (car
-       (last
-        (split-string
-         (eshell/pwd)
-         "/")))
-      (if
-          (=
-           (user-uid)
-           0)
-          " # " " $ "))))
  '(eshell-scroll-to-bottom-on-input 'this)
  '(eshell-scroll-to-bottom-on-output 'this)
  '(face-font-selection-order '(:weight :height :width :slant))

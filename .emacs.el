@@ -304,4 +304,3 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
       (load-theme my/theme))))
 
 (run-at-time "10 sec" 10 #'my/theme-of-hour)
-
