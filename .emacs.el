@@ -255,7 +255,7 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
 
 (global-set-key (kbd "<f2>") 'eshell)
 (global-set-key (kbd "<f6>") 'my/switch-large-font)
-(global-set-key (kbd "C-<f6>") 'my/go-dark)
+(global-set-key (kbd "C-<f6>") 'my/change-sides)
 (global-set-key (kbd "<f8>") 'highlight-thing-mode)
 (global-set-key (kbd "<f10>") 'whitespace-mode)
 (global-set-key (kbd "C-<f10>") 'my/whitespace-cleanup-switch)
