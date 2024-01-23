@@ -1,8 +1,8 @@
 # dotfiles
 
 ```
-brew install git gpg pinentry-mac
-brew cask install emacs karabiner-elements yubico-authenticator keepassxc
+brew install git clojure
+brew cask install emacs docker google-chrome karabiner-elements yubico-authenticator keepassxc zoom microsoft-teams
 ```
 
 ```
@@ -12,4 +12,5 @@ ln -s ~/projects/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/projects/dotfiles/.globalgitignore ~/.globalgitignore
 ln -s ~/projects/dotfiles/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 ln -s ~/projects/dotfiles/.profile ~/.profile
+ln -s ~/projects/dotfiles/ssh-config ~/.ssh/config
 ```
