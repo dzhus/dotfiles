@@ -92,7 +92,6 @@
     (match 1)))
 
 (use-package delight)
-(use-package docker)
 (use-package dockerfile-mode)
 (use-package ein)
 (use-package exec-path-from-shell)
@@ -101,7 +100,8 @@
   :after haskell-mode
   :bind (("<f7>" . flycheck-mode))
   :hook ((haskell-mode . flycheck-mode)
-         (clojure-mode . flycheck-mode)))
+         (clojure-mode . flycheck-mode)
+         (typescript-mode . flycheck-mode)))
 
 (use-package flycheck-clj-kondo)
 
@@ -167,6 +167,7 @@
 (use-package terraform-mode)
 
 (use-package tide)
+
 (use-package tss)
 
 (use-package typescript-mode

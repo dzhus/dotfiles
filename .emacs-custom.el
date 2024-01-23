@@ -10,7 +10,8 @@
  '(auto-fill-inhibit-regexp nil)
  '(auto-insert-mode t)
  '(auto-revert-mode-text "")
- '(before-save-hook '(my/whitespace-cleanup markdown-toc-refresh-toc))
+ '(before-save-hook
+   '(my/whitespace-cleanup tide-format-before-save markdown-toc-refresh-toc))
  '(bibtex-field-delimiters 'double-quotes)
  '(browse-url-browser-function 'browse-url-default-browser)
  '(calendar-week-start-day 1)
@@ -101,7 +102,7 @@
  '(org-todo-keywords '("TODO" "IN PROGRESS" "DONE"))
  '(outline-regexp "[\\#\\*]+" t)
  '(package-selected-packages
-   '(tide typescript-mode plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode docker delight counsel cider auctex))
+   '(tide typescript-mode plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode delight counsel cider auctex))
  '(paradox-github-token t)
  '(plantuml-default-exec-mode 'executable)
  '(po-auto-edit-with-msgid nil)
