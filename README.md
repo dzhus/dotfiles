@@ -3,7 +3,7 @@
 `brew install opensc git`, configure `~/.ssh/config`, clone dotfiles
 ```
 brew install git clojure
-brew cask install emacs docker google-chrome karabiner-elements yubico-authenticator keepassxc zoom microsoft-teams
+brew cask install emacs docker karabiner-elements yubico-authenticator keepassxc
 ```
 
 ```
