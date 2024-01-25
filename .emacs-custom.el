@@ -130,7 +130,10 @@
      ("text/html" . html-mode)
      ("application/yaml" . yaml-mode)))
  '(safe-local-variable-values
-   '((haskell-indentation-where-pre-offset . 4)
+   '((cider-shadow-default-options . "dev")
+     (cider-default-cljs-repl . shadow)
+     (cider-preferred-build-tool . shadow-cljs)
+     (haskell-indentation-where-pre-offset . 4)
      (haskell-indentation-where-post-offset . 4)
      (haskell-indentation-starter-offset . 4)
      (haskell-indentation-left-offset . 4)
