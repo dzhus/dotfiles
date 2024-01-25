@@ -168,8 +168,6 @@
 
 (use-package tide)
 
-(use-package tss)
-
 (use-package typescript-mode
   :init
   (add-hook 'typescript-mode-hook
@@ -316,5 +314,3 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
       (load-theme my/theme))))
 
 (run-at-time "10 sec" 10 #'my/theme-of-hour)
-
-(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home")
