@@ -81,15 +81,9 @@
 (use-package clojure-mode
   :config
   (define-clojure-indent
-    (defroutes 'defun)
-    (GET 2)
-    (POST 2)
-    (PUT 2)
-    (DELETE 2)
-    (HEAD 2)
-    (ANY 2)
-    (context 2)
     (match 1)))
+
+(use-package csv-mode)
 
 (use-package delight)
 (use-package dockerfile-mode)
