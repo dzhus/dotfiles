@@ -129,6 +129,7 @@
      ("image/gif" . image-mode)
      ("text/html" . html-mode)
      ("application/yaml" . yaml-mode)))
+ '(ring-bell-function 'ignore)
  '(safe-local-variable-values
    '((cider-shadow-default-options . "dev")
      (cider-default-cljs-repl . shadow)
