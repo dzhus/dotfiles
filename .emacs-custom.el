@@ -53,6 +53,7 @@
  '(git-link-use-commit t)
  '(graphviz-dot-auto-preview-on-save t)
  '(graphviz-dot-indent-width 4)
+ '(ibuffer-default-sorting-mode 'filename/process)
  '(ibuffer-mode-hook '(hl-line-mode))
  '(idris-interpreter-path "idris2")
  '(imenu-auto-rescan t)
