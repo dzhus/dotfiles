@@ -15,6 +15,7 @@
  '(bibtex-field-delimiters 'double-quotes)
  '(browse-url-browser-function 'browse-url-default-browser)
  '(calendar-week-start-day 1)
+ '(cider-auto-jump-to-error 'errors-only)
  '(cider-lein-parameters "with-profile -user repl :headless :host localhost")
  '(cider-prompt-for-symbol nil)
  '(cider-repl-pop-to-buffer-on-connect 'display-only)
