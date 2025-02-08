@@ -210,32 +210,6 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
 
 ;;;; Key bindings
 
-;; MS NEK 4k bindings
-(global-set-key (kbd "<XF86Forward>")
-                (lambda ()
-                  (interactive)
-                  (select-window (next-window))))
-
-(global-set-key (kbd "<XF86Back>")
-                (lambda ()
-                  (interactive)
-                  (select-window (previous-window))))
-
-(global-set-key (kbd "<C-XF86Back>")
-                'previous-buffer)
-
-(global-set-key (kbd "<C-XF86Forward>")
-                'next-buffer)
-
-(global-set-key (kbd "<XF86ApplicationRight>")
-                'forward-sexp)
-
-(global-set-key (kbd "<XF86ApplicationLeft>")
-                'backward-sexp)
-
-(global-set-key (kbd "<XF86Calculator>")
-                'calc)
-
 (global-set-key (kbd "<f1>") #'(lambda () (interactive)
                                  (find-file "~/mobile-sync/org/TODO.org")))
 
