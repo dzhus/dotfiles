@@ -210,8 +210,6 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
 
 ;;;; Key bindings
 
-(global-set-key (kbd "<f1>") #'(lambda () (interactive)
-                                 (find-file "~/mobile-sync/org/TODO.org")))
 
 (global-set-key (kbd "C-c u")
                 'browse-url)
@@ -231,6 +229,8 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
 
 ;; Fun row
 
+(global-set-key (kbd "<f1>") #'(lambda () (interactive)
+                                    (find-file "~/mobile-sync/org/TODO.org")))
 (global-set-key (kbd "<f2>") 'eshell)
 (global-set-key (kbd "<f6>") 'my/switch-large-font)
 (global-set-key (kbd "C-<f6>") 'my/change-sides)
@@ -242,10 +242,6 @@ See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
 (global-set-key (kbd "£") '(lambda () (interactive) (insert "#")))
 (define-key isearch-mode-map (kbd "£")
   '(lambda () (interactive) (isearch-process-search-char ?\#)))
-
-;; (push "~/.emacs.d/lisp" load-path)
-;; (load-library "mermaid.el")
-
 
 ;; Fix $PATH
 (when (memq window-system '(mac ns x))
