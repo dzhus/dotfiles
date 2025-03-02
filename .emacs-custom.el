@@ -11,7 +11,7 @@
  '(auto-insert-mode t)
  '(auto-revert-mode-text "")
  '(before-save-hook
-   '(my/whitespace-cleanup tide-format-before-save markdown-toc-refresh-toc))
+   '(my/whitespace-cleanup tide-format-before-save markdown-toc-refresh-toc lsp-format-buffer))
  '(bibtex-field-delimiters 'double-quotes)
  '(browse-url-browser-function 'browse-url-default-browser)
  '(calendar-week-start-day 1)
