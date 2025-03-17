@@ -83,6 +83,13 @@
   (define-clojure-indent
     (match 1)))
 
+(use-package rust-mode
+  :init
+  (add-hook 'rust-mode-hook
+              (lambda ()
+                (flycheck-rust-setup))))
+(use-package flycheck-rust)
+
 (use-package csv-mode)
 
 (use-package delight)
@@ -94,6 +101,7 @@
   :after haskell-mode
   :bind (("<f7>" . flycheck-mode))
   :hook ((haskell-mode . flycheck-mode)
+         (rust-mode . flycheck-mode)
          (clojure-mode . flycheck-mode)
          (typescript-mode . flycheck-mode)))
 
