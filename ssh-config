@@ -2,3 +2,6 @@ PKCS11Provider /opt/homebrew/lib/opensc-pkcs11.so
 
 Host opi1.dzhus.org
 ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
+
+Host opi2.dzhus.org
+ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
