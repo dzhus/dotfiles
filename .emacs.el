@@ -94,7 +94,6 @@
 
 (use-package delight)
 (use-package dockerfile-mode)
-(use-package ein)
 (use-package exec-path-from-shell)
 
 (use-package flycheck

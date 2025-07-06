@@ -30,7 +30,7 @@
  '(custom-enabled-themes '(solarized-light))
  '(custom-file "~/.emacs-custom.el")
  '(custom-safe-themes
-   '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default))
+   '("2b0fcc7cc9be4c09ec5c75405260a85e41691abb1ee28d29fcd5521e4fca575b" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default))
  '(dante-methods-alist '((stack "stack.yaml" ("stack" "repl" dante-target))))
  '(default-input-method "russian-computer")
  '(dired-dwim-target t)
@@ -104,7 +104,7 @@
  '(org-todo-keywords '("TODO" "IN PROGRESS" "DONE"))
  '(outline-regexp "[\\#\\*]+" t)
  '(package-selected-packages
-   '(tide typescript-mode plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode ein dockerfile-mode delight counsel cider auctex))
+   '(flycheck-rust rust-mode tide typescript-mode plantuml-mode parinfer-rust-mode parinfer forge csv-mode edit-server flycheck-clj-kondo company git-link origami json-mode flycheck lsp-haskell lsp exec-path-from-shells yaml-mode use-package terraform-mode sqlformat solarized-theme restclient racket-mode projectile no-emoji markdown-toc magit idris-mode highlight-thing hide-mode-line graphviz-dot-mode dockerfile-mode delight counsel cider auctex))
  '(paradox-github-token t)
  '(plantuml-default-exec-mode 'executable)
  '(po-auto-edit-with-msgid nil)
