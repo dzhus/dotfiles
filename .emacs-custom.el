@@ -162,6 +162,7 @@
  '(use-package-always-ensure t)
  '(user-full-name "Dmitry Dzhus")
  '(user-mail-address "dima@dzhus.org")
+ '(vc-git-annotate-switches "-C")
  '(winner-mode t)
  '(woman-use-own-frame nil))
 (custom-set-faces
