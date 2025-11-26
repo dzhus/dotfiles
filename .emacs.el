@@ -97,12 +97,8 @@
 (use-package exec-path-from-shell)
 
 (use-package flycheck
-  :after haskell-mode
   :bind (("<f7>" . flycheck-mode))
-  :hook ((haskell-mode . flycheck-mode)
-         (rust-mode . flycheck-mode)
-         (clojure-mode . flycheck-mode)
-         (typescript-mode . flycheck-mode)))
+  :hook (haskell-mode rust-mode clojure-mode typescript-mode))
 
 (use-package flycheck-clj-kondo)
 
