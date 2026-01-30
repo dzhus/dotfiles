@@ -62,6 +62,8 @@
 (use-package antlr-mode
   :mode "\\.g4\\'")
 
+(use-package adoc-mode)
+
 (use-package company
   :hook ((haskell-mode . company-mode)
          (cider-mode . company-mode)
