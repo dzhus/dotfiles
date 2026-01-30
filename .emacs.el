@@ -199,11 +199,15 @@
   "Github Actions workflow linter.
 
 See https://github.com/rhysd/actionlint/blob/main/docs/install.md."
-  :command ("actionlint"
-            "-config-file"
-            (eval (concat (file-name-directory (buffer-file-name)) "../actionlint.yml"))
-            "-format" "{{range $err := .}}{{$err.Filepath}}:{{$err.Line}}:{{$err.Column}}:{{$err.EndColumn}}:{{$err.Message}}\n{{end}}"
-            source)
+  :command
+  ("actionlint"
+   "-format"
+   "{{range $err := .}}{{$err.Filepath}}:{{$err.Line}}:{{$err.Column}}:{{$err.EndColumn}}:{{$err.Message}}\n{{end}}"
+   (eval
+    (let ((config-file-path (concat (file-name-directory (buffer-file-name)) "../actionlint.yml")))
+      (when (file-exists-p config-file-path)
+        (list "-config-file" config-file-path))))
+   source)
   :modes yaml-mode
   :error-filter flycheck-increment-error-end-columns
   :error-patterns
