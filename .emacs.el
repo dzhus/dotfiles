@@ -122,12 +122,21 @@
 
 (use-package lsp-haskell)
 
+(defun my/cleanup-worktree-buffers (worktree)
+  (dolist (buffer (buffer-list))
+    (let ((buf-file (buffer-file-name buffer)))
+      (when (and buf-file
+                 (string-match worktree buf-file))
+        (kill-buffer buffer)))))
+
 (use-package magit
   :bind (("C-x v =" . magit-diff-buffer-file)
          ("C-x v l" . magit-log-buffer-file)
          ("<f5>" . magit-status)
          ;; MBP Touch bar workaround
-         ("C-5" . magit-status)))
+         ("C-5" . magit-status))
+  :init
+  (advice-add #'magit-worktree-delete :after 'my/cleanup-worktree-buffers))
 
 (use-package markdown-mode
   :init
